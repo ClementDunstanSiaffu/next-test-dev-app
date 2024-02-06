@@ -66,11 +66,11 @@ export default  function Advertsiment (){
                  <>
                        {
                 currentIndex > 0 &&
-                <div style={{width:"25%",contain:"content",marginRight:20}}>
+                <div style={{width:"10%",contain:"content",marginRight:20}}>
                     <img src= {advertsiments[currentIndex-1].pcImageUrl} style={{height:200}}/>
                 </div>
             }
-            <div style={{width:currentIndex <= 0 ||  currentIndex + 1 >= advertsiments.length ? "70%":"40%",contain:"content"}}>
+            <div style={{width:currentIndex <= 0 ||  currentIndex + 1 >= advertsiments.length ? "90%":"80%",contain:"content"}}>
                 <img src= {advertsiments[currentIndex].pcImageUrl} style={{width:"100%",height:200}}/>
                 {
                    currentIndex > 0 && 
@@ -87,7 +87,7 @@ export default  function Advertsiment (){
             </div>
             {
                 currentIndex + 1 < advertsiments.length &&
-                <div style={{width:"25%",contain:"content",marginLeft:20}}>
+                <div style={{width:"10%",contain:"content",marginLeft:20}}>
                     <img src= {advertsiments[currentIndex+1].pcImageUrl} style={{height:200}}/>
                 </div>
             }
