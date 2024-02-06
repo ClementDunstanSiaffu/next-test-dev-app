@@ -90,3 +90,25 @@ button{
     border-radius: 4px;
     padding: 3px 0;
 }
+
+.product-name{
+    width: 200px;
+    font-weight: 600;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis !important;
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 2; 
+    margin: 5px 0;
+}
+
+.product-price{
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.star-container{
+    display: flex;
+    align-items: center;
+}

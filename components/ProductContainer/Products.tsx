@@ -42,11 +42,11 @@ const ProductContainer = ({products,title,description,id}:ProductContentsProps)=
                                                 alt='product' 
                                             />
                                             <button className='buy-btn'>디지털</button>
-                                            <div className='product-name'>{title} 연말 결산_디지털</div>
-                                            <div>
+                                            <div className='product-name'>{title} 연말 결산_디지털 연말 결산_디지털 연말 결산_디지털 결산_디지털</div>
+                                            <div className='product-price'>
                                                 <span style={{color:"orange"}}>2%</span> 130000元
                                             </div>
-                                            <div>
+                                            <div className='star-container'>
                                                 <Image src={star} width={16} height={16} alt='star' />5
                                             </div>
                                         </div>
