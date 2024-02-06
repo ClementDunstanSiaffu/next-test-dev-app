@@ -1,11 +1,11 @@
-"use client"
+// "use client"
 
 import React from 'react';
 import './assets/styles/Products.css';
-import { FaChevronRight } from "react-icons/fa6";
-import { FaChevronLeft } from "react-icons/fa6";
-import { FaStar } from "react-icons/fa";
 import Image from 'next/image';
+import chevronRight from './assets/icons/chevron-right.png';
+import chevronLeft from './assets/icons/chevron-left.png';
+import star from './assets/icons/star.png'
 
 type ProductContentsProps = {
     products?:any,
@@ -23,10 +23,8 @@ const ProductContainer = ({products,title,description,id}:ProductContentsProps)=
                     <div className = "paragraph">{description}</div>
                 </div>
                 <div className='icon-container'>
-                    {/* <Image src={ChevronLeft} width={20} height={20} alt='chevron-left' />
-                    <Image src={ChevronRight} width={20} height={20} alt='chevron-right' /> */}
-                    <FaChevronLeft  color='grey'/>
-                    <FaChevronRight  color='grey'/>    
+                    <Image src={chevronLeft} width={10} height={10} alt='icon-left' />
+                    <Image src={chevronRight}  width={10} height={10} alt='icon-right'/>    
                 </div>
             </div>
             <div className = "product-contents-product-side">
@@ -43,11 +41,14 @@ const ProductContainer = ({products,title,description,id}:ProductContentsProps)=
                                                 height={180} 
                                                 alt='product' 
                                             />
+                                            <button className='buy-btn'>디지털</button>
                                             <div className='product-name'>{title} 연말 결산_디지털</div>
                                             <div>
                                                 <span style={{color:"orange"}}>2%</span> 130000元
                                             </div>
-                                            <div><FaStar color='grey'/> 5</div>
+                                            <div>
+                                                <Image src={star} width={16} height={16} alt='star' />5
+                                            </div>
                                         </div>
                                     )
                                 })

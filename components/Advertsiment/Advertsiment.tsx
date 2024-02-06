@@ -53,12 +53,6 @@ export default  function Advertsiment (){
         setCurrentIndex(newIndex);
     }
 
-    const items = advertsiments.map((advert,a) => (
-        <div key={advert.mainBannerId}>
-            <img src={advert.pcImageUrl} alt={`Image ${a + 1}`} />
-        </div>
-    ))
-
     return(
         <div className="scroll-container">
             {
