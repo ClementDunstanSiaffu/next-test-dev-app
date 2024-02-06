@@ -1,0 +1,59 @@
+
+.carousel .control-dots .dot {
+    transition: opacity .25s ease-in;
+    opacity: .3;
+    filter: alpha(opacity=30);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.9);
+    background: #fff;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+    display: none;
+    margin: 0 8px;
+}
+
+.scroll-container{
+    width:90%;
+    overflow-x:scroll;
+    display: flex;
+    align-items: center;
+    height: 250px;
+    contain: content;
+    overflow-y: hidden !important;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    transition: 0.5s linear;
+}
+
+button{
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+
+.left-btn-container{
+    position: absolute;
+    top: 40%;
+    left:5%;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-btn-container{
+    position: absolute;
+    top: 40%;
+    right:5%;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
