@@ -69,9 +69,7 @@ const getProducts = async()=>{
         return []
     }catch(err){
         throw (err)
-    }
-
-   
+    }   
 }
 
 export default async function Products(){
