@@ -11,12 +11,12 @@ type ProductContentsProps = {
     products?:any,
     title?:string,
     description?:string,
-    key:string|number
+    id:string|number
 }
 
-const ProductContainer = ({products,title,description,key}:ProductContentsProps)=>{
+const ProductContainer = ({products,title,description,id}:ProductContentsProps)=>{
     return(
-        <div className = "product-content-container" key={key}>
+        <div className = "product-content-container" key={id}>
             <div className = "product-contents-description-side">
                 <div className = "description-container">
                     <div className = "description-title">{title}</div>
@@ -36,7 +36,7 @@ const ProductContainer = ({products,title,description,key}:ProductContentsProps)
                             {
                                 products.map((product,i)=>{
                                     return(
-                                        <div className='each-product-container'>
+                                        <div className='each-product-container' key={`${i}-image`}>
                                             <Image 
                                                 src={product.uri} 
                                                 width = {200} 
@@ -82,12 +82,15 @@ export default async function Products(){
     <div className='product-container'>
         {
                 products.items.map((product,p)=>{
-                    return <ProductContainer 
+                    return <React.Fragment key = {`${product.id}-${p}`}>
+                             <ProductContainer 
                                 title={product.title} 
                                 description={product.description} 
                                 products={product.media}
-                                key={product.id}
+                                id={product.id}
                             />
+                    </React.Fragment>
+                   
                 })
         }
     </div>
