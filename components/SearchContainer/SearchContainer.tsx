@@ -24,7 +24,7 @@ export default function SearchContainer(){
                 />
             </div>
             <div className='icon-container'>
-                <span><RxThickArrowDown /></span>
+                <RxThickArrowDown size={20}/>
                 연말결산_디지털
             </div>
         </div>

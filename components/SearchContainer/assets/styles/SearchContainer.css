@@ -3,21 +3,23 @@
 .search-outer-container{
     display: flex;
     align-items: center;
-    width: 90%;
+    width: 52%;
+    margin: 10px auto;
 }
 
 .logo-container{
     color: rgb(8, 181, 158);
-    flex: 1.4;
+    flex: 2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .bold-high-text{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 12px;
 }
 
 .light-low-text{
-    font-size: 16px;
+    font-size: 10px;
 }
 
 .search-input-container{
@@ -42,10 +44,19 @@ input{
 }
 
 .input-contents-container{
-    width: 250px;
-    height: 40px;
+    width: 180px;
+    height: 24px;
     border: solid lightgrey 1px;
-    font-size: 14px;
+    font-size: 10px;
     padding-left:26px;
     margin-left: -20px;
+    border-radius: 4px;
+}
+
+.icon-container{
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
 }
