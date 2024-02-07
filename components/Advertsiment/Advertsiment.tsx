@@ -14,6 +14,7 @@ import { FaChevronLeft } from "react-icons/fa6";
 // import Image from 'next/image'
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
+import Skeleton from "./Skeleton";
 
 
 const getAdvertsiment = async ()=>{
@@ -58,34 +59,34 @@ export default  function Advertsiment (){
             {
                 advertsiments?.length ?
                  <>
-                       {
-                currentIndex > 0 &&
-                <div style={{width:"10%",contain:"content",marginRight:20}}>
-                    <img src= {advertsiments[currentIndex-1].pcImageUrl} style={{height:200}}/>
-                </div>
-            }
-            <div style={{width:currentIndex <= 0 ||  currentIndex + 1 >= advertsiments.length ? "90%":"80%",contain:"content"}}>
-                <img src= {advertsiments[currentIndex].pcImageUrl} style={{width:"100%",height:200}}/>
-                {
-                   currentIndex > 0 && 
-                   <button className="left-btn-container" onClick={decremement}>
-                        <FaChevronLeft color="white" size={20}/>
-                    </button> 
-                }
-                {
-                    currentIndex + 1 < advertsiments.length && 
-                    <button className="right-btn-container" onClick={increment}>
-                        <FaChevronRight color="white" size={20}/>
-                    </button> 
-                }
-            </div>
-            {
-                currentIndex + 1 < advertsiments.length &&
-                <div style={{width:"10%",contain:"content",marginLeft:20}}>
-                    <img src= {advertsiments[currentIndex+1].pcImageUrl} style={{height:200}}/>
-                </div>
-            }
-                 </>:null
+                    {
+                        currentIndex > 0 &&
+                        <div style={{width:"10%",contain:"content",marginRight:20}}>
+                            <img src= {advertsiments[currentIndex-1].pcImageUrl} style={{height:200}}/>
+                        </div>
+                    }
+                    <div style={{width:currentIndex <= 0 ||  currentIndex + 1 >= advertsiments.length ? "90%":"80%",contain:"content"}}>
+                        <img src= {advertsiments[currentIndex].pcImageUrl} style={{width:"100%",height:200}}/>
+                        {
+                        currentIndex > 0 && 
+                        <button className="left-btn-container" onClick={decremement}>
+                                <FaChevronLeft color="white" size={20}/>
+                            </button> 
+                        }
+                        {
+                            currentIndex + 1 < advertsiments.length && 
+                            <button className="right-btn-container" onClick={increment}>
+                                <FaChevronRight color="white" size={20}/>
+                            </button> 
+                        }
+                    </div>
+                    {
+                        currentIndex + 1 < advertsiments.length &&
+                        <div style={{width:"10%",contain:"content",marginLeft:20}}>
+                            <img src= {advertsiments[currentIndex+1].pcImageUrl} style={{height:200}}/>
+                        </div>
+                    }
+                 </>:<Skeleton />
             }
         </div>
     )
